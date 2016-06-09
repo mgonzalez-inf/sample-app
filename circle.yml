@@ -1,0 +1,6 @@
+machine:
+  services:
+    - docker
+    
+docker build -t mgonzalez/sample-app .
+docker run mgonzalez/sample-app go test
