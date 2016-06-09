@@ -6,3 +6,7 @@ dependencies:
   override:
     - docker build -t mgonzalez/sample-app .
     - docker run mgonzalez/sample-app go test
+    
+test:
+  override:
+    - docker run mgonzalez/sample-app go test
