@@ -3,7 +3,12 @@ sudo: required
 services:
   - docker
 
-script:
+before_install:
   - docker build -t mgonzalez/sample-app .
+
+install:
+  - docker run mgonzalez/sample-app go test
+
+scrript:
   - docker run -d -p 127.0.0.1:80:80 mgonzalez/sample-app
   - docker ps -a
