@@ -5,8 +5,6 @@ services:
 
 install:
   - docker build -t mgonzalez/sample-app .
-  - docker run -d -p --name mgonzalez/sample-app mgonzalez/sample-app
-  - docker ps -a
 
 script:
   - docker ps | grep -q blog
